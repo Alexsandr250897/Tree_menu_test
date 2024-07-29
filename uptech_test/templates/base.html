@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                Title
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{% static 'site_css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'site_css/base.css' %}">
+
+        <link rel="stylesheet" href="{% static 'menu_css/menu-styles.css' %}">
+        <script src="{% static 'menu_scripts/menu-scripts.js' %}"></script>
+        {% block links %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

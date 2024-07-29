@@ -1,0 +1,1 @@
+[{"model": "menu_app.menuitem", "pk": 1, "fields": {"title": "main-page", "parent": null, "href": null, "named_url": "main-page", "menu": 1}}, {"model": "menu_app.menuitem", "pk": 2, "fields": {"title": "Second Page", "parent": 1, "href": null, "named_url": "second-view", "menu": 1}}]

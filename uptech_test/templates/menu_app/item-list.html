@@ -1,0 +1,28 @@
+{% load menu_tags %}
+{% for item in item_list %}
+    {% with item.children as item_set %}
+    <li class="menu-list-item">
+
+        {% if item_set %}
+            <button class="collapsible {% if not item.expand %}btn-collapsed{% endif %}"
+                    id="btn-{{ item.menu_name }}-{{ item.item_id }}"
+                    onclick="collapse_btn_onclick(
+                        'btn-{{ item.menu_name }}-{{ item.item_id }}',
+                        '{{ item.menu_name }}-{{ item.item_id }}'
+                            )">
+            </button>
+        {% endif %}
+
+        <a href="{{ item.href }}" class="menu-link">
+            {{ item.title }}
+        </a>
+
+        {% if item_set %}
+            <ul class="{% if not item.expand %}collapse{% endif %} menu-list"
+                id="{{ item.menu_name }}-{{ item.item_id }}">
+                {% menu_item item_set %}
+            </ul>
+        {% endif %}
+    </li>
+    {% endwith %}
+{% endfor %}

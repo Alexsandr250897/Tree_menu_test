@@ -1,0 +1,47 @@
+.menu-list {
+    display: block;
+    transition: opacity 1s linear;
+}
+
+.menu-list.collapse {
+    display: none;
+    transition: opacity 1s linear;
+}
+
+/* Style the list */
+.menu-list {
+    list-style-type: none;
+    padding: 0 0 0 40px;
+}
+
+/* Style the list items */
+.menu-list-item {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+.menu-link {
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+}
+
+/* Style the button */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+    transition: rotate 0.1s ease-in-out;
+}
+
+.collapsible.btn-collapsed{
+    rotate: -90deg;
+    transition: rotate 0.1s ease-in-out;
+}
